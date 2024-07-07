@@ -1,0 +1,136 @@
+/*--------------------------------
+    Call To Action Style  
+--------------------------------*/
+.clltoaction-style-default {
+    padding: 250px 0;
+    .title {
+        font-size: 52px;
+        font-weight: 600;
+        position: relative;
+        margin-bottom: 30px;
+        padding-bottom: 14px;
+        &::before {
+            position: absolute;
+            content: "";
+            background: #fff;
+            width: 100px;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .subtitle {
+        color: #fff;
+        font-size: 28px;
+        line-height: 40px;
+        margin: 0;
+        padding: 0 16%;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+
+    .call-to-btn {
+        margin-top: 50px;
+    }
+
+    .content {
+        &.text-left { 
+            .title {
+                &::before {
+                    left: 0;
+                    transform: none;
+                }
+            }
+            .subtitle {
+                padding: 0 16% 0 0;
+            }
+        }
+    }
+
+    &.style-2 {
+        padding: 150px 0;
+    }
+
+
+    &.style-3 {
+        padding: 150px 0;
+
+        .content-wrapper {
+            background-color: var(--color-lessdark);
+            border-radius: var(--radius);
+            padding: 50px 40px;
+        }
+
+        .content {
+            .title {
+                font-size: 32px;
+                margin-bottom: 18px;
+                padding-bottom: 10px;
+            }
+            .subtitle {
+                font-size: 16px;
+                line-height: 1.4;
+                letter-spacing: 0.5px;
+            }
+        }
+        .call-to-btn {
+            margin-top: 0;
+        }
+    }
+
+    &.style-4 {
+        padding: 0;
+        .content-wrapper {
+            background-color: var(--color-lessdark);
+            border-radius: var(--radius);
+            padding: 70px 50px;
+        }
+        .content {
+            .title {
+                font-size: 47px;
+                margin-bottom: 33px;
+                padding-bottom: 16px;
+                line-height: 1.4;
+            }
+            .subtitle {
+                font-size: 16px;
+                line-height: 1.4;
+                letter-spacing: 0.5px;
+            }
+        }
+        .call-to-btn {
+            margin-top: 0;
+        }
+    }
+
+
+    &.style-5 {
+        padding: 0;
+        .content-wrapper {
+            background-color: var(--color-lessdark);
+            border-radius: var(--radius);
+            padding: 70px 50px;
+        }
+        .content {
+            .title {
+                font-size: 47px;
+                margin-bottom: 20px;
+                padding-bottom: 0;
+                line-height: 1.4;
+                &::before {
+                    display: none;
+                }
+            }
+            .subtitle {
+                font-size: 16px;
+                line-height: 1.4;
+                letter-spacing: 0.5px;
+            }
+        }
+        .call-to-btn {
+            margin-top: 30px;
+        }
+    }
+
+}

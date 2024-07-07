@@ -1,0 +1,368 @@
+/*-------------------------
+    Testimonial Styles  
+--------------------------*/
+
+.card-style-default {
+    &.testimonial-style-one {
+        .inner {
+            .thumbnail {
+                overflow: visible;
+
+                &::after {
+                    position: absolute;
+                    content: "”";
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    background: var(--color-blackest);
+                    right: 0;
+                    top: 0;
+                    color: #fff;
+                    z-index: 2;
+                    text-align: center;
+                    line-height: 58px;
+                    font-size: 39px;
+                }
+            }
+
+            .content {
+                .description {
+                    margin-bottom: 14px;
+                    font-size: var(--font-size-b2) !important;
+                }
+
+                .title {
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-bottom: 2px;
+                    letter-spacing: 0.5px;
+                }
+
+                .subtitle {
+                    font-size: 16px;
+                    line-height: 1.2;
+                    margin-bottom: 0;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+
+        &.style-two {
+            .inner {
+                .thumbnail {
+                    position: relative;
+                }
+
+                .description {
+                    margin-bottom: 19px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+/*-----------------------------
+    Testimonial Style Two  
+-------------------------------*/
+
+.testimonial-style-two {
+    .content {
+        position: relative;
+        z-index: 2;
+
+        &::after {
+            position: absolute;
+            content: "“";
+            left: -20px;
+            color: var(--color-lessdark);
+            text-align: center;
+            font-size: 320px;
+            opacity: 0.7;
+            line-height: 50px;
+            top: 52px;
+            z-index: -1;
+        }
+
+        .form {
+            display: block;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            line-height: 1.5;
+            margin-bottom: 30px;
+            font-size: 32px;
+
+            @media #{$lg-layout} {
+                margin-bottom: 25px;
+                font-size: 24px;
+            }
+
+            @media #{$md-layout} {
+                font-size: 24px;
+            }
+
+            @media #{$sm-layout} {
+                font-size: 24px;
+            }
+        }
+
+        .client-info {
+            .title {
+                font-size: 22px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+                margin-bottom: 0;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+                color: var(--color-body);
+                font-style: italic;
+            }
+        }
+    }
+
+    .thumbnail {
+        background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-primary) 75%, var(--color-primary) 100%) 98% / 200% 100%;
+        border-radius: 100%;
+        padding: 10px;
+
+        img {
+            border-radius: 100%;
+        }
+    }
+}
+
+
+.testimonial-wrapper {
+    .has-show-more-inner-content {
+        &.large-height {
+            max-height: 60vh;
+        }
+    }
+}
+
+.testimonial-style-defalt {
+    .inner {
+        padding: 30px;
+
+        .rating {
+            margin-bottom: 30px;
+        }
+
+        .content {
+            padding: 0;
+            text-align: left;
+
+            .description {
+                padding: 0;
+                margin-bottom: 30px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 38px;
+                    height: 32px;
+                    left: 0;
+                    top: -8px;
+                    background: url(../../images/icons/quate-comma.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .bottom-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .title-text {
+                    margin-bottom: 0;
+                }
+
+                .desc {
+                    margin-bottom: 10px;
+                    color: var(--color-link);
+                }
+
+                .desc-img {
+                    max-height: 24px;
+                    width: auto;
+                }
+
+                .meta-img-section {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .btn-default {
+                    position: relative;
+                    transition: 0.4s;
+
+                    &:hover {
+                        z-index: 2;
+                        transform: scale(1.1);
+                    }
+                }
+
+                .image {
+                    position: relative;
+                    left: -10px;
+                    transition: 0.3s;
+                    z-index: -1;
+
+                    img {
+                        border: 2px solid var(--color-border);
+                        padding: 2px;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.file-shaped-bg {
+    position: relative;
+    display: inline-block;
+    padding: 2px;
+    transition: all 0.3s ease-in-out;
+
+    &::before,
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.3s;
+        width: 100%;
+        height: 100%;
+        background: #1A1A1E;
+        content: "";
+        clip-path: polygon(50% 10%, 100% 10%, 100% 100%, 0 100%, 0 0, 40% 0);
+        border-radius: var(--radius);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &::after {
+        background: linear-gradient(to right, var(--color-primary-gradient-start), var(--color-primary-gradient-end));
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:hover,
+    &.active {
+        filter: drop-shadow(0px 20px 48.5px rgba(106, 72, 242, 0.03));
+
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .inner {
+        position: relative;
+        z-index: 3;
+        clip-path: polygon(50% 10%, 100% 10%, 100% 100%, 0 100%, 0 0, 40% 0);
+        border-radius: var(--radius);
+        background: #0E0C15;
+        border: 0;
+        height: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.rainbow-testimonial-area {
+    .has-show-more {
+        .rbt-show-more-btn {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            font-size: var(--font-size-b2);
+            line-height: var(--line-height-b2);
+            padding: 20px 60px;
+            background: var(--color-dark);
+            color: var(--color-white);
+            border-radius: 8px;
+            margin-top: 30px;
+
+            &::after {
+                display: none;
+            }
+
+            &::before {
+                background: linear-gradient(180deg, rgba(14, 12, 21, 0.09) 0%, #0E0C15 100%);
+                height: 250px;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.card-style-default {
+    &.has-bg-shaped {
+        background: none;
+        position: relative;
+        transition: 0.4s;
+
+        .inner {
+            background: transparent;
+            position: relative;
+            z-index: 2;
+            backdrop-filter: none;
+        }
+
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            transition: 0.4s;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .bg-hover {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &:hover,
+        &.active {
+            .bg-hover {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .bg {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+}

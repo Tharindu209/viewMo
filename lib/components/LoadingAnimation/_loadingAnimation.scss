@@ -1,0 +1,117 @@
+$primary-color: #007bff; // Bootstrap primary color
+$dark-color: #343a40; // Example dark color
+
+.preloadermp3 {
+  background: $dark-color;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+}
+
+@keyframes bgg {
+  0% {
+    background: lighten($primary-color, 20%);
+  }
+  50% {
+    background: $primary-color;
+  }
+  100% {
+    background: $primary-color;
+  }
+}
+
+.loadermp3 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+
+.loadermp3 .circlemp3 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  transform: rotate(225deg);
+  animation-iteration-count: infinite;
+  animation-name: orbit;
+  animation-duration: 5.5s;
+  left: 3px;
+  top: -5px;
+}
+
+.loadermp3 .circlemp3:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  animation: bgg 1500ms ease-in alternate infinite;
+}
+
+.loadermp3 .circlemp3:nth-child(2) {
+  animation-delay: 240ms;
+}
+
+.loadermp3 .circlemp3:nth-child(3) {
+  animation-delay: 480ms;
+}
+
+.loadermp3 .circlemp3:nth-child(4) {
+  animation-delay: 720ms;
+}
+
+.loadermp3 .circlemp3:nth-child(5) {
+  animation-delay: 960ms;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(225deg);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  7% {
+    transform: rotate(345deg);
+    animation-timing-function: linear;
+  }
+  30% {
+    transform: rotate(455deg);
+    animation-timing-function: ease-in-out;
+  }
+  39% {
+    transform: rotate(690deg);
+    animation-timing-function: linear;
+  }
+  70% {
+    transform: rotate(815deg);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    transform: rotate(945deg);
+    animation-timing-function: ease-out;
+  }
+  76% {
+    transform: rotate(945deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(945deg);
+    opacity: 0;
+  }
+}
+
+.loading-textmp3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: $primary-color;
+  text-align: center;
+  margin-top: 20px;
+}

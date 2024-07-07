@@ -1,0 +1,229 @@
+/*----------------------------
+    Video Popup Styles  
+------------------------------*/
+.video-popup,
+.rainbow-gallery {
+    position: relative;
+    display: block;
+
+    .thumbnail {
+        img {
+            width: 100%;
+        }
+    }
+
+    .video-icon {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 10px;
+        transition: 0.4s;
+    }
+}
+
+.rainbow-gallery {
+    .video-icon {
+        opacity: 0;
+        transition: 0.4s;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    &:hover {
+        .video-icon {
+            opacity: 1;
+            margin-top: 0;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}
+
+.video-gallery-content {
+    border-radius: 10px;
+    padding-top: 300px;
+    padding-bottom: 60px;
+    overflow: hidden;
+
+    @media #{$md-layout} {
+        padding-bottom: 40px;
+        padding-top: 150px;
+    }
+
+    @media #{$sm-layout} {
+        padding-bottom: 40px;
+        padding-top: 150px;
+    }
+
+    .overlay-content {
+        padding: 0 60px;
+
+        @media #{$sm-layout} {
+            padding: 0 20px;
+        }
+
+        .title {
+            margin-top: 15px;
+            margin-bottom: 0;
+            font-size: 30px;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+            color: var(--color-white);
+
+            @media #{$sm-layout} {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.vedio-caption {
+    margin-top: 20px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to right, var(--color-secondary-gradient-start), var(--color-secondary-gradient-end));
+        text-transform: capitalize;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        h4 {
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+
+        i {
+            font-size: 30px;
+        }
+    }
+}
+
+
+/*----------------------
+    RBT Video Styles  
+-----------------------*/
+.mfp-bg {
+    z-index: 9999;
+}
+
+.mfp-wrap {
+    z-index: 9999;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+html.picture {
+    margin: 0 !important;
+}
+
+img.mfp-img {
+    padding-bottom: 0;
+}
+
+.mfp-bg {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    backdrop-filter: blur(15px);
+}
+
+.mfp-iframe-scaler iframe {
+    border-radius: 10px;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 1;
+}
+
+
+.mfp-iframe-holder .mfp-close,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    top: -60px;
+    right: -50px;
+    font-size: 30px;
+    font-weight: 400;
+    transition: 0.4s;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    background: var(--color-blackest);
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    color: var(--color-white);
+}
+
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    top: -10px;
+    right: -50px;
+}
+
+.side-nav-opened body::before,
+.close_side_menu,
+.popup-mobile-menu,
+.rbt-offcanvas-side-menu {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+}
+
+
+/*----------------------
+VenoBox Video Styles  
+-----------------------*/
+.vbox-container {
+    overflow: hidden !important;
+}
+
+.vbox-close {
+    top: 70px !important;
+    right: 70px !important;
+    font-size: 30px;
+    font-weight: 400;
+    transition: 0.4s;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    background: var(--color-blackest);
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    color: var(--color-white);
+}
+
+.vbox-backdrop {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(15px);
+}
+
+.vbox-child {
+    background: transparent !important;
+}

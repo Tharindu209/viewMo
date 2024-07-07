@@ -1,0 +1,85 @@
+.popup {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.popup-green {
+  background-color: var(--color-success);
+}
+
+.popup-red {
+  background-color: var(--color-danger);
+}
+
+.popup-blue {
+  background-color: var(--color-info);
+}
+
+.popup-small {
+  width: 50px;
+}
+
+.popup-medium {
+  width: 300px;
+}
+
+.popup-large {
+  width: 450px;
+}
+
+.popup-closeButton {
+  background-color: white;
+  padding: 5px 10px;
+  border: 0px;
+  color: var(--color-bg-1);
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.popup-closeButton:hover {
+  background-color: var(--color-bg-1);
+  color: white;
+}
+
+/* Positioning styles */
+.popup-top-center {
+  top: 150px;
+  left: 50%;
+}
+
+.popup-center {
+  top: 50%;
+  left: 50%;
+}
+
+.popup-up-center {
+  top: 75px;
+  left: 50%;
+}
+
+.popup-topRight {
+  top: 100px;
+  right: 20px;
+}
+
+.popup-bottomLeft {
+  top: 150px;
+  left: 20px;
+}
+
+.popup-bottomRight {
+  top: 150px;
+  right: 20px;
+}

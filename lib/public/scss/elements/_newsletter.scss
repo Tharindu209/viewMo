@@ -1,0 +1,90 @@
+/*---------------------------
+    Newsletter Styles  
+----------------------------*/
+.border-top-bottom {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+.newsletter-area {
+    .border-top-bottom {
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+    }
+}
+
+
+// Newsletter Style One 
+.rainbow-newsletter-default {
+    .newsletter-wrapper {
+        padding: 40px 0;
+    }
+    .newsletter-section-title {
+        .title {
+            color: var(--color-body);
+            margin-bottom: 7px;
+        }
+        .description {
+            color: var(--color-body);
+            margin-bottom: 0;
+        }
+    }
+    .rainbow-newsletter {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 -10px;
+
+        @media #{$large-mobile} {
+           display: block;
+        }
+
+        @media #{$md-layout} {
+          justify-content: flex-start;
+        }
+
+        @media #{$sm-layout} {
+          justify-content: flex-start;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+            margin: 0 10px;
+            input {
+                height: 55px;
+                padding: 0 24px;
+                min-width: 500px;
+                background: var(--color-blackest);
+                border: 0 none;
+                @media #{$lg-layout} {
+                    min-width: 400px;
+                }
+                @media #{$md-layout} {
+                    min-width: 400px;
+                }
+                @media #{$sm-layout} {
+                    min-width: 350px;
+                }
+                @media #{$large-mobile} {
+                    min-width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+            .btn-default {
+                height: 55px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

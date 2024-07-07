@@ -1,0 +1,38 @@
+/*----------------------------
+    Video Popup Styles  
+------------------------------*/
+.video-popup ,
+.rn-gallery {
+    position: relative;
+    display: block;
+    .thumbnail {
+        img {
+            width: 100%;
+        }
+    }
+    .video-icon {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 10px;
+        transition: 0.4s;
+    }
+}
+
+
+.rn-gallery {
+    .video-icon {
+        opacity: 0;
+        transition: 0.4s;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    &:hover {
+        .video-icon {
+            opacity: 1;
+            margin-top: 0;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}

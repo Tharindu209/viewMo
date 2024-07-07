@@ -1,0 +1,150 @@
+/*--------------------------
+    Accordion Styles  
+---------------------------*/
+.rainbow-accordion-style {
+    .card {
+        background: var(--color-blackest);
+        border: 0;
+        border-radius: var(--radius) !important;
+        .card-header {
+            background-color: transparent;
+            border-bottom: 0 none;
+            box-shadow: none;
+            padding: 20px 30px;
+            margin-bottom: 0;
+            button {
+                font-size: 18px;
+                line-height: 27px;
+                outline: none;
+                text-decoration: none;
+                box-shadow: none;
+                width: 100%;
+                text-align: left;
+                padding: 0;
+                background: transparent;
+                position: relative;
+                background: linear-gradient(90deg, #805AF5 0%, #CE99FF 100%);
+                text-transform: capitalize;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                &::before {
+                    position: absolute;
+                    content: "\e996";
+                    font-family: 'feather' !important;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: 0.4s;
+                    background: linear-gradient(90deg, #805AF5 0%, #CE99FF 100%);
+                    text-transform: capitalize;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                &.collapsed {
+                color: var(--color-heading);
+                background: none;
+                background-clip: unset;
+                -webkit-text-fill-color: unset;
+                    &::before {
+                        content: "\e9b1";
+                        background: none;
+                        background-clip: unset;
+                        -webkit-text-fill-color: unset;
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            padding: 16px;
+            padding-top: 0;
+            font-size: var(--font-size-b2);
+            line-height: var(--line-height-b2);
+            font-weight: var(--p-regular);
+            color: var(--color-body);
+            padding: 30px 20px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        & + .card {
+            margin-top: 20px;
+        }
+    }
+
+    &.rainbow-accordion-02 {
+        .card {
+            background: transparent;
+            border-radius: 0 !important;
+            .card-header {
+                border-bottom: 2px solid var(--color-border);
+                padding: 0px 20px 10px 0;
+                .accordion-button  {
+                    &::after {
+                        display: none;
+                    }
+                }
+                
+            }
+            .card-body {
+                padding: 15px 20px 10px 0;
+                border-top: 0;
+            }
+        }
+    }
+
+
+    &.rainbow-accordion-03 {
+        .card {
+            background: transparent;
+            border-radius: 0 !important;
+
+            .card-header {
+                border: 2px solid var(--color-border);
+                padding: 15px 20px;
+                border-radius: var(--radius) !important;
+            }
+            .card-body {
+                padding: 15px 20px 10px 0;
+                border: 0;
+            }
+        }
+    }
+
+    &.rainbow-accordion-04 {
+        .card {
+            border: 2px solid var(--color-border);
+            background: transparent;
+            border-radius: var(--radius) !important;
+
+            .card-header {
+                padding: 15px 20px;
+                border-radius: var(--radius) !important;
+            }
+            .card-body {
+                border-top: 2px solid var(--color-border);
+            }
+        }
+    }
+}
+
+
+.accordion-button {
+    &::after {
+
+        visibility: hidden;
+    }
+}
+.rainbow-accordion-area{
+    .split-inner{
+        @media #{$small-mobile} {
+            margin-bottom: 30px;
+        }
+        .contact-button {
+            @media #{$small-mobile} {
+                margin-top: 20px !important;
+            }
+        }
+    }
+}

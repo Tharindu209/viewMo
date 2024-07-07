@@ -1,0 +1,147 @@
+/*-----------------------
+    Progress Bar 
+-----------------------*/
+.single-progress  {
+    & + .single-progress {
+        margin-top: 40px;
+    }
+}
+
+.single-progress {
+    position: relative;
+    overflow: hidden;
+    .title {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 0;
+        color: #acacac;
+        color: var(--color-body);
+        letter-spacing: .5px;
+        margin-bottom: 18px;
+    }
+}
+
+.progress {
+    height: 6px;
+    overflow: visible;
+    background-color: var(--color-blackest);
+    border-radius: 10px;
+    .progress-bar {
+        border-radius: 10px;
+        width: 0;
+        height: 100%;
+        background-color: var(--color-primary);
+        transition: width .5s ease;
+        overflow: visible;
+        &.bar-color-2 {
+            background: rgb(251, 83, 67);
+        }
+        &.bar-color-3 {
+            background: #E33FA1;
+        }
+        &.bar-color-4 {
+            background: #6549D5;
+        }
+        &.bar-gradiand {
+            background: radial-gradient(circle farthest-corner at 0% 0%, var(--color-primary) 25%, var(--color-primary) 45%, var(--color-primary) 65%, var(--color-primary) 85%);
+        }
+    }
+    .progress-number {
+        position: absolute;
+        font-size: 14px;
+        top: 0;
+        line-height: 24px;
+        right: 0;
+        z-index: 1;
+    }
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    .title {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 0;
+        color: var(--color-body);
+        letter-spacing: 0.5px;
+    }
+    span {
+        &.progress-number {
+            font-size: 14px;
+            color: var(--color-body);
+        }
+    }
+}
+
+.no-radius {
+    .progress {
+        border-radius: 0;
+        .progress-bar {
+            border-radius: 0;
+        }
+    }
+}
+.large-size {
+    .progress {
+        height: 20px;
+    }
+}
+
+
+
+/*-----------------------------------
+    Radial Progress 
+-----------------------------------*/
+.radial-progress-single {
+    text-align: center;
+    .circle-info {
+        padding-top: 20px;
+        text-align: center;
+        .title {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            font-style: italic;
+            margin-bottom: 0;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            color: var(--color-body);
+        }
+    }
+}
+
+
+.radial-progress {
+    position: relative;
+    @media #{$sm-layout} {
+        display: inline-block;
+    }
+    .circle-text {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+        span {
+            &.count {
+                font-size: 28px;
+                line-height: 1;
+                font-weight: 600;
+                color: var(--color-body);
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: "%";
+                    left: 100%;
+                    color: var(--color-body);
+                }
+            }
+        }
+    }
+}
+
+

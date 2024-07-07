@@ -1,0 +1,271 @@
+// Advance tab Styles 
+
+.advance-tab-button-1 {
+    .tab-button-list {
+        list-style: none;
+        padding: 0;
+        margin: -15px 0;
+        border-bottom: 0;
+
+        li {
+            margin: 15px 0;
+        }
+
+        .tab-button {
+            cursor: pointer;
+            margin: 0 15px;
+            padding-top: 24px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            background-color: transparent;
+            border: 0 none;
+            opacity: 0.8;
+
+            &::before {
+                position: absolute;
+                content: "";
+                background: rgba(52, 54, 103, 1);
+                width: 100%;
+                height: 2px;
+                left: 0;
+                top: 0;
+                transition: 0.3s;
+                z-index: -1;
+                border-radius: 7px;
+            }
+
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            .title {
+                color: var(--color-body);
+                font-size: 20px;
+                margin-bottom: 0;
+                margin-top: 10px;
+                transition: 0.3s;
+            }
+
+            .description {
+                margin-bottom: 0;
+                transition: 0.3s;
+            }
+
+            .count-text {
+                height: 36px;
+                width: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: var(--font-size-b2);
+                line-height: var(--line-height-b2);
+                background: url(../../images/tab/tab-bg-shape.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+
+            // Tab With Icon 
+            &.tab-with-icon {
+                padding: 25px;
+                border: 1px solid var(--color-white-off) !important;
+
+                .tab {
+                    display: flex;
+                    height: 100%;
+
+                    .icon {
+                        display: flex;
+                        width: 60px;
+                        border-radius: 5px;
+                        background: var(--color-primary-darker);
+                        color: var(--color-primary);
+                        text-align: center;
+                        font-size: 20px;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 100%;
+
+                        i {}
+                    }
+
+                    .content {
+                        padding-right: 24px;
+                        padding-left: 24px;
+
+                        .description {
+                            font-size: var(--font-size-b3);
+                        }
+                    }
+                }
+            }
+
+
+            &.bg-color-white-off {
+                &::before {
+                    background: var(--color-white-off);
+                }
+
+                &::after {
+                    border-left: 20px solid var(--color-white-off);
+                    border-top: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                }
+            }
+
+
+
+        }
+
+        .tab-button {
+            &.tab-with-icon {
+                &.active {
+                    border: 1px solid transparent !important;
+                }
+            }
+
+            &.active {
+                opacity: 1;
+
+                .title {
+                    color: var(--color-white);
+                }
+
+                &::before {
+                    background: linear-gradient(to right, var(--color-primary-gradient-start), var(--color-primary-gradient-end));
+                }
+            }
+        }
+
+
+
+    }
+}
+
+.rainbow-advance-tab-area.aiwave-bg-gradient {
+    .tab-button-list {
+        @media #{$sm-layout} {
+            justify-content: center;
+        }
+
+        li {
+            @media #{$sm-layout} {
+                width: 100%;
+            }
+        }
+    }
+
+    .tab {
+        @media #{$sm-layout} {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+
+.advance-tab-content-1 {
+    .thumbnail {
+        img {
+            border-radius: 10px;
+        }
+    }
+}
+
+
+
+// Right Align 
+
+.advance-tab-button-1.right-align .tab-button-list .tab-button::after {
+    transform: scale(0.9) rotate(-180deg);
+    left: auto;
+    right: 100%;
+}
+
+.advance-tab-button-1.right-align .tab-button-list .tab-button::after {
+    transform: scale(1) rotate(-180deg);
+}
+
+.advance-tab-button-1.right-top .tab-button-list .tab-button::after {
+    left: 50%;
+    transform: scale(0.9) translateX(-50%) rotate(-92deg);
+    bottom: 94%;
+    top: auto;
+}
+
+.advance-tab-button-1.right-top .tab-button-list .tab-button::after {
+    opacity: 0;
+    transform: scale(1) translateX(-50%) rotate(-92deg);
+}
+
+.advance-tab-button-1.right-top .tab-button-list .tab-button.active::after {
+    opacity: 1;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus {
+    color: #495057;
+    background: transparent;
+    border: 0 none;
+    box-shadow: none;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+
+.advance-tab-button-1 .tab-button-list .tab-button:focus {
+    outline: none;
+    border: 0 none;
+    box-shadow: none;
+}
+
+
+
+
+.service-thumbnail-offset {
+    margin-right: -50px;
+    margin-bottom: -50px;
+    border-radius: 10px 0 10px 0;
+
+    img {
+        border-radius: 10px 0 10px 0;
+    }
+
+    @media #{$laptop-device} {
+        margin-right: -30px;
+        margin-bottom: -40px;
+    }
+
+    @media #{$lg-layout} {
+        margin-right: -30px;
+        margin-bottom: -40px;
+    }
+
+    @media #{$md-layout} {
+        margin-right: -30px;
+        margin-bottom: -40px;
+    }
+
+
+}
+
+
+.advance-tab-four {
+    .tab-content {
+        .thumbnail {
+            @media #{$md-layout} {
+                margin-top: 30px;
+
+            }
+        }
+    }
+}

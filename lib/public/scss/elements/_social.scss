@@ -1,0 +1,125 @@
+/*-----------------------
+    Social Icons 
+-------------------------*/ 
+.social-default {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    margin: -5px;
+
+    li {
+        margin: 5px;
+        a {
+            width: 48px;
+            background: var(--color-blackest);
+            height: 48px;
+            text-align: center;
+            line-height: 46px;
+            display: inline-block;
+            border-radius: 100%;
+            transition: 0.3s;
+            color: var(--color-white);
+            z-index: 2;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: var(--color-primary);
+                transform: scale(0.5);
+                opacity: 0;
+                transition: 0.3s;
+                border-radius: 100%;
+            }
+            &:hover {
+                color: var(--color-white);
+                &::after {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.transparent-with-border {
+        li {
+            a {
+                line-height: 45px;
+                background: transparent;
+                border: 1px solid var(--color-border);
+                &:hover {
+                    border-color: transparent;
+                }
+                &::after {
+                    border: 1px solid var(--color-primary);
+                }
+            }
+        }
+    }
+
+    &.with-gradient {
+        li {
+            a {
+                &::after {
+                    background-image: radial-gradient(circle farthest-corner at 0.0%, var(--color-pink) 25%, var(--color-secondary) 45%, var(--color-primary-light) 65%, var(--color-light-green) 85%);
+                }
+            }
+        }
+    }
+
+    &.with-bg-primary {
+        li {
+            a {
+                background-color: var(--color-primary);
+                border: 2px solid var(--color-primary);
+                transition: 0.5s;
+                line-height: 44px;
+                &::after {
+                   display: none;
+                }
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+
+    &.icon-naked {
+        li {
+            a {
+                background: transparent;
+                width: 30px;
+                height: 30px;
+                line-height: 36px;
+                &::after {
+                    display: none;
+                }
+                &:hover {
+                    color: var(--color-primary) !important;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

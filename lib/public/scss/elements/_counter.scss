@@ -1,0 +1,123 @@
+/* Counter Style One  */
+
+.counter-style-1 {
+    .count-number {
+        @extend .theme-gradient;
+        font-size: 90px;
+        @media #{$sm-layout} {
+            font-size: 62px;
+        }
+        @media #{$large-mobile} {
+            font-size: 45px;
+        }
+    }
+    .title {
+        font-size: 20px;
+        line-height: 1.3em;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+
+.counter-style-2 {
+    margin-top: 30px;
+    .count-number {
+        font-size: 44px;
+        background-color: var(--color-blackest);
+        display: inline-block;
+        min-width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 150px;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        font-weight: 500;
+        color: var(--color-white);
+    }
+    .title {
+        font-size: 20px;
+        line-height: 1.3em;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .description {
+        line-height: 1.8;
+        padding-right: 16%;
+        margin: 0;
+    }
+    &.color-variation { 
+        .count-number {
+            background-color: var(--color-primary-darker);
+            color: var(--color-primary);
+        }
+    }
+    &.border-style {
+        .count-number {
+            background-color: transparent;
+            border: 2px solid var(--color-border);
+        }
+    }
+    &.text-center {
+        .description {
+            padding: 0 10%;
+        }
+    }
+}
+
+
+[class*=col]:nth-child(2) {
+    .counter-style-2 {
+        &.color-variation { 
+            .count-number {
+                background-color: var(--color-secondary-darker);
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+
+[class*=col]:nth-child(3) {
+    .counter-style-2 {
+        &.color-variation { 
+            .count-number {
+                background-color: var(--color-primary-darker);
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+
+
+/*------------------------------
+    Counterup Style Four  
+-------------------------------*/
+.counter-style-4 {
+    text-align: left;
+    margin-top: 30px;
+    .counter-title {
+        margin-top: 8px;
+        font-weight: 400;
+        font-size: 24px;
+    }
+    .count-number {
+        font-size: 35px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: var(--color-primary);
+        display: inline-block;
+        position: relative;
+        &::after {
+            content: "+";
+        }
+        span {
+            display: inline-block;
+        }
+    }
+}
+
+
+

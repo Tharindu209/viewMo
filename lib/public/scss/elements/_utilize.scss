@@ -1,0 +1,232 @@
+.rbt-utilize-area {
+
+    .rbt-widget-details,
+    .rbt-default-sidebar-wrapper {
+
+        .rbt-course-details-list-wrapper,
+        .rbt-default-sidebar-list {
+            @extend %liststyle;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+
+                i {
+                    color: var(--color-body);
+                    margin-right: 10px;
+                    font-size: 16px;
+                }
+
+                span {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 26px;
+
+                    &.rbt-feature-value {
+                        font-size: 12px;
+                    }
+                }
+
+                a {
+                    color: var(--color-body);
+                    transition: 0.4s;
+
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+                }
+
+                &+li {
+                    padding-top: 10px;
+                    margin-top: 10px;
+                    border-top: 1px solid var(--color-border);
+                }
+
+                &.current {
+                    a {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*-------------------------
+        Rbt Default
+    -------------------------*/
+    .rbt-index-upper {
+        position: relative;
+        z-index: 1;
+    }
+
+    .sticky-top {
+        top: 30px;
+        z-index: 3;
+    }
+
+    .rbt-single-group {
+        margin: -5px;
+
+        .rbt-single-list {
+            margin: 5px;
+        }
+    }
+
+    .transform-sm-none {
+        @media #{$sm-layout} {
+            transform: none !important;
+        }
+    }
+
+    .rbt-shadow-box {
+        background: var(--color-blackest);
+        box-shadow: var(--shadow-1);
+        padding: 25px 18px;
+        border-radius: var(--radius);
+        margin-bottom: 20px;
+    }
+
+    .rbt-title-style-3 {
+        margin-bottom: 24px;
+        font-size: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    /*------------------------------
+        Rbt Theme Gradient
+    -------------------------------*/
+
+    .theme-gradient {
+        &.new-big-heading-gradient {
+            background: linear-gradient(to right, var(--color-primary-gradient-start), var(--color-primary-gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0.001);
+            white-space: nowrap;
+        }
+    }
+
+    .rbt-gradient-border {
+        background: linear-gradient(to right, var(--color-primary-gradient-start), var(--color-primary-gradient-end)) !important;
+        z-index: 3;
+        border-radius: var(--radius);
+
+        &::before {
+            content: "";
+            z-index: -1;
+            top: 3px;
+            left: 3px;
+            position: absolute;
+            background: var(--color-blackest);
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
+            border-radius: 10px;
+        }
+    }
+
+
+
+    .sticky-top {
+        position: sticky;
+        top: 100px;
+        position: -webkit-sticky;
+    }
+
+    .single-inner-box {
+        .section-title {
+            padding: 24px 46px;
+            background: var(--color-blackest);
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+        }
+    }
+
+    .rbt-elements-area {
+        padding: 32px 46px;
+
+        @media #{$sm-layout} {
+            padding: 25px 18px;
+        }
+
+        .image {
+            img {
+                border-radius: var(--radius);
+            }
+        }
+
+        .title-sm,
+        .image,
+        .p {
+            margin-bottom: 24px;
+        }
+    }
+
+
+
+
+    .rbt-style-guide-area {
+        .rbt-gradient-border {
+            border-radius: var(--radius);
+        }
+    }
+}
+
+
+.rbt-utilize-area {
+    .inner-content {
+        @media #{$sm-layout} {
+            padding-left: calc(var(--bs-gutter-x) * .5) !important;
+        }
+    }
+}
+
+
+
+.rbt-utilize-area {
+    .utilize-inner {
+        border-radius: var(--radius);
+    }
+}
+
+.rbt-utilize-area {
+
+    .rbt-course-details-list-wrapper li.has-submenu .collapse-btn,
+    .rbt-default-sidebar-list li.has-submenu .collapse-btn {
+        font-size: 20px;
+        color: var(--color-primary);
+        background: var(--color-blackest);
+        padding-left: 50px;
+
+        &::after {
+            position: absolute;
+            content: "\e996";
+            font-family: "feather" !important;
+            font-size: var(--font-size-b1);
+            color: var(--color-blackest);
+            left: 5px;
+            right: unset;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.4s ease;
+            height: 30px;
+            width: 30px;
+            background: var(--color-primary);
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        &.collapsed {
+            background: transparent;
+            color: var(--heading);
+
+            &:after {
+                color: var(--color-heading);
+                background: var(--color-dark);
+            }
+        }
+    }
+}

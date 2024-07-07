@@ -1,0 +1,73 @@
+/*====================
+    Breadcrump Area 
+======================*/
+.breadcarumb-style-1 {
+    background-color: var(--color-blackest) !important;
+    background: url(../../images/bg/breadcrumb-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.breadcrumb-inner {
+    text-align: center;
+
+    .title {
+        br {
+            @media #{$md-layout} {
+                display: none;
+            }
+
+            @media #{$sm-layout} {
+                display: none;
+            }
+        }
+    }
+
+    ul {
+        &.page-list {
+            @extend %liststyle;
+            margin-top: 16px;
+
+            li {
+                display: inline-block;
+                color: var(--color-body);
+                padding: 0 12px;
+                position: relative;
+                font-size: 16px;
+                margin: 0;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: var(--color-body);
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 100%;
+                    right: -5px;
+                }
+
+                a {
+                    color: var(--color-body);
+                    transition: .5s;
+
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+                }
+
+                &.rainbow-breadcrumb-item {
+                    &.active {
+                        color: var(--color-primary);
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

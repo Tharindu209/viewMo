@@ -1,0 +1,141 @@
+/**************************************
+ CSS Index  
+****************************
+
+/--- Default Styles -----/
+
+01.Variables
+02.Mixins
+03.Reset
+04.Typography
+05.Extend
+06.Animations
+07.Shortcode
+08.Spacing
+09.Common
+10.Forms
+11.Sal
+12.Text Animation
+13.Themebg
+
+/--- Header Styles -----/
+
+01.Headerdefault
+02.Nav
+03.Header Top
+04.HeaderTopBar
+05.Mobilemenu
+
+/--- Elements -----/
+
+01.Breadcrumb
+02.Sectiontitle
+03.Button
+04.Service
+05.Card
+06.Counter
+07.Progressbar
+08.Accordion
+09.Social Share
+10.Team
+11.Portfolio
+12.Testimonial
+13.Slickslide
+14.Timeline
+15.Call to Action
+16.Tab
+17.Pricing
+18.Split
+19.Vedio
+20.Gallery
+21.Contact
+22.Brand
+23.404
+24.Advance Tab
+25.Advancepricing
+26.Contact Form
+27.Swicher
+28.Backto Top
+29.About
+30.Newsletter
+
+/--- Blog -----/
+01.Blog
+02.Sidebar
+03.Blog Details
+
+/--- Footer -----/
+01.Footer
+02.Copyright
+
+/--- Template -----/
+01.Banner
+02.Portfoliodetails
+03.Splash
+04.Lightmode
+
+***************************************/
+
+
+/**************************************
+    Default Styles
+***************************************/
+@import 'default/variables';
+@import 'default/mixins';
+@import 'default/reset';
+@import 'default/typography';
+@import 'default/extend';
+@import 'default/animations';
+@import 'default/shortcode';
+@import 'default/spacing';
+@import 'default/common';
+@import 'default/forms';
+@import 'default/sal';
+@import 'default/text-animation';
+
+
+
+
+/**************************************
+            Elements 
+***************************************/
+@import 'elements/breadcrumb';
+@import 'elements/sectiontitle';
+@import 'elements/button';
+@import 'elements/service';
+@import 'elements/card';
+@import 'elements/counter';
+@import 'elements/progressbar';
+@import 'elements/accordion';
+@import 'elements/social-share';
+@import 'elements/team';
+@import 'elements/portfolio';
+@import 'elements/testimonial';
+@import 'elements/slickslide';
+@import 'elements/timeline';
+@import 'elements/call-to-action';
+@import 'elements/tab';
+@import 'elements/pricing';
+@import 'elements/split';
+@import 'elements/vedio';
+@import 'elements/gallery';
+@import 'elements/contact';
+@import 'elements/brand';
+@import 'elements/404';
+@import 'elements/advance-tab';
+@import 'elements/advancepricing';
+@import 'elements/contact-form';
+@import 'elements/swicher';
+@import 'elements/backto-top';
+@import 'elements/about';
+@import 'elements/newsletter';
+@import 'elements/feature';
+@import 'elements/signup';
+@import 'elements/release-notes';
+@import 'elements/utilize';
+
+
+/**************************************
+            Dashboard
+***************************************/
+@import './dashboard/dashboardd';

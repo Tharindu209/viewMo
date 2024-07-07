@@ -1,0 +1,304 @@
+.slick-initialized .slick-slide {
+    margin-bottom: 0;
+}
+
+.slick-grid-15 {
+    margin: 0 -15px;
+
+    .slide-single-layout {
+        padding: 0 15px;
+    }
+}
+
+
+/*----------------------
+    Slick Dots  
+------------------------*/
+.rainbow-slick-dot {
+    .slick-dots {
+        bottom: -60px;
+
+        @media #{$large-mobile} {
+            bottom: -50px;
+        }
+
+        li {
+            width: 30px;
+            margin: 0;
+            opacity: 1;
+            position: relative;
+
+            button {
+                &::before {
+                    display: none;
+                }
+
+                &::after {
+                    background: var(--color-lessdark);
+                    width: 100%;
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 6px;
+                    height: 6px;
+                    @extend %transition;
+                    border-radius: 50%;
+                    margin-left: 11px;
+                    background-color: transparent;
+                    box-shadow: inset 0 0 0 5px var(--color-lessdark);
+                }
+            }
+
+            &.slick-active {
+                opacity: 1;
+
+                button {
+                    &::after {
+                        -webkit-transform: scale(2);
+                        transform: scale(2);
+                        box-shadow: inset 0 0 0 1px var(--color-primary);
+                        background-color: transparent;
+                        background-color: transparent !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // Dot Light  
+    &.dot-light {
+        .slick-dots {
+            li {
+                button {
+                    &::after {
+                        background: #ffffff;
+                        box-shadow: inset 0 0 0 5px #ffffff;
+                    }
+                }
+
+                &.slick-active {
+                    opacity: 1;
+
+                    button {
+                        &::after {
+                            -webkit-transform: scale(2);
+                            transform: scale(2);
+                            box-shadow: inset 0 0 0 1px var(--color-primary);
+                            background-color: transparent;
+                            background-color: transparent !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*----------------------
+    Slick Arrow  
+------------------------*/
+.rainbow-slick-arrow {
+    position: relative;
+
+    button {
+        &.slick-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            transition: 0.5s;
+            opacity: 0;
+            width: 68px;
+            height: 68px;
+            border: 2px solid var(--color-border);
+            border-radius: 100%;
+            color: var(--color-border);
+            background-color: transparent;
+
+            @media #{$md-layout} {
+                display: none !important;
+            }
+
+            @media #{$lg-layout} {
+                display: none !important;
+            }
+
+            @media #{$sm-layout} {
+                display: none !important;
+            }
+
+            &:hover {
+                background: var(--color-primary);
+                border-color: var(--color-primary);
+            }
+
+            &::before {
+                line-height: 1;
+                opacity: 0.4;
+                position: relative;
+                top: -2px;
+                transition: 0.5s;
+                z-index: 2;
+            }
+
+            &.prev-arrow {
+                left: 15px;
+
+                @media #{$sm-layout} {
+                    left: 10px;
+                }
+
+                &::before {
+                    content: url(../../images/slick-arrow-left-small.png);
+                    vertical-align: middle;
+                }
+
+                &:hover {
+                    left: 10px;
+
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &.next-arrow {
+                left: auto;
+                right: 15px;
+
+                @media #{$sm-layout} {
+                    right: 10px;
+                }
+
+                &::before {
+                    content: url(../../images/slick-arrow-right-small.png);
+                    vertical-align: middle;
+                }
+
+                &:hover {
+                    right: 10px;
+
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            i {
+                display: none;
+            }
+        }
+    }
+
+
+    &.slick-arrow-alignwide {
+        button {
+            &.slick-arrow {
+                &.prev-arrow {
+                    left: -105px;
+                }
+
+                &.next-arrow {
+                    right: -105px;
+                    left: auto;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        button {
+            &.slick-arrow {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.rainbow-gradient-arrows {
+    position: relative;
+
+    button {
+        &.slick-arrow {
+            position: absolute;
+            top: -137px;
+            padding: 3px;
+            z-index: 2;
+            transition: 0.5s;
+            border-radius: 2px;
+            background: none;
+            outline: none;
+            border: none;
+
+            &.prev-arrow,
+            &.slick-prev {
+                right: 85px;
+                left: auto;
+                background: url(../../images/service/service-arrow-01.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 59px;
+                width: 53px;
+
+                &::before {
+                    content: "";
+                }
+
+                i {
+                    display: none;
+                }
+
+                &:hover {
+                    background: url(../../images/service/service-arrow-01-hover.png);
+                }
+
+                @media #{$sm-layout} {
+                    left: 80%;
+                }
+            }
+
+            &.next-arrow,
+            &.slick-next {
+                right: 15px;
+                background: url(../../images/service/service-arrow-02.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 59px;
+                width: 53px;
+
+                &::before {
+                    content: "";
+                }
+
+                i {
+                    display: none;
+                }
+
+                &:hover {
+                    background: url(../../images/service/service-arrow-02-hover.png);
+                }
+
+                @media #{$sm-layout} {
+                    left: 85%;
+                }
+            }
+
+            @media #{$md-layout} {
+                display: none !important;
+            }
+
+            @media #{$lg-layout} {
+                display: none !important;
+            }
+
+            @media #{$sm-layout} {
+                display: none !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+/*---------------------------
+    Error Styles Area  
+-----------------------------*/
+.error-inner {
+    text-align: center;
+    h1 {
+        font-size: 200px;
+        line-height: 1;
+        color: var(--color-primary);
+        font-weight: var(--p-bold);
+        @media #{$sm-layout} {
+            font-size: 100px;
+            line-height: 1;
+        }
+    }
+
+    .title {
+        line-height: 45px;
+        font-weight: var(--p-bold);
+    }
+
+    .description {
+        font-size: var(--font-size-b2);
+        line-height: 28px;
+        color: var(--color-body);
+        font-weight: var(--p-regular);
+        margin-bottom: 30px;
+    }
+    
+    .blog-search {
+        display: inline-block;
+        input {
+            min-width: 500px;
+        }
+    }
+
+    .view-more-button {
+        margin-top: 30px;
+    }
+}
+

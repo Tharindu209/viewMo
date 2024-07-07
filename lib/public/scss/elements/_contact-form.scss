@@ -1,0 +1,116 @@
+.rainbow-comment-form {
+    .section-title {
+        span {
+            &.subtitle {
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                line-height: 18px;
+                font-size: 16px;
+                border-radius: 4px;
+                margin-bottom: 12px;
+            }
+        }
+
+        .title {
+            font-size: 50px;
+            font-weight: 600;
+            line-height: 62px;
+            margin-bottom: 20px;
+            color: var(--color-white);
+        }
+    }
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+.rnform-group {
+    margin-bottom: 20px;
+    input {
+        border: 2px solid var(--color-border);
+        border-radius: 4px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+.rainbow-comment-form .inner .rnform-group textarea {
+    min-height: 193px;
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    resize: none;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.contact-details-box{
+    background: var(--color-blackest);
+    padding: 50px;
+    border-radius: var(--radius);
+    .title{
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+    .tab-button-style-2{
+        border: 0;
+        margin-bottom: 24px;
+        gap: 16px;
+        li{
+            a{
+                padding: 20px;
+                font-size: var(--font-size-b2);
+                color: var(--color-heading);
+                background: var(--color-dark);
+                border-radius: var(--radius-small);
+                width: 240px;
+                &::after{
+                    display: none;
+                }
+                span{
+                    display: block;
+                    text-align: center;
+                    font-size: var(--font-size-b2);
+                    line-height: var(--line-heght-b2);
+                    color: var(--color-heading);
+                }
+                &.active{
+                    background: var(--color-primary);
+                    span{
+                        color: var(--color-blackest);
+                    }
+                }
+            }
+        }
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.rainbow-contact-area{
+    .rainbow-address{
+        gap: 20px;
+        display: flex;
+        margin-top: 0;
+        padding: 30px;
+        &+.rainbow-address{
+            margin-top: 30px;
+        }
+        .inner{
+            .title{
+                font-size: var(--h4);
+                margin-bottom: 12px;
+                font-weight: var(--p-medium);
+            }
+            p{
+                font-size: var(--font-size-b2);
+                line-height: var(--line-heght-b2);
+            }
+        }
+    }
+
+}
