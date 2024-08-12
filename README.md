@@ -1,5 +1,3 @@
-Absolutely, here's the combined markdown code:
-
 ## viewmo: A Chatbot UI for React and Next.js
 
 **viewmo** is a comprehensive npm module designed to simplify the integration of chatbot functionality within your React and Next.js applications. It provides a robust and customizable `<Chat>` component that streamlines the creation of user-friendly chat interfaces.
