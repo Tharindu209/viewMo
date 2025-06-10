@@ -34,7 +34,7 @@
     "formidable": "^3.5.1",
     "http-proxy-middleware": "^3.0.0",
     "mermaid": "^10.9.1",
-    "next": "^14.2.3",
+    "next": "^15.3.3",
     "pdfjs-dist": "^3.11.174",
     "prismjs": "^1.29.0",
     "raw-loader": "^4.0.2",
